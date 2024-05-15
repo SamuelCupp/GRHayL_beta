@@ -35,10 +35,9 @@ jobs:
         run: LD_LIBRARY_PATH=$LD_LIBRARY_PATH:`pwd`/lib ./test/unit_test_ET_Legacy_${{ matrix.test-function }}
       - name: Generate coverage report
         uses: ./.github/actions/code-coverage
-        secrets:
-          codecov_token: ${{ secrets.CODECOV_TOKEN }}
         with:
           compiler: 'gcc'
+          codecov_token: ${{ secrets.CODECOV_TOKEN }}
 
   c2p-routines:
     strategy:
@@ -70,7 +69,6 @@ jobs:
         uses: ./.github/actions/code-coverage
         with:
           compiler: 'gcc'
-        secrets:
           codecov_token: ${{ secrets.CODECOV_TOKEN }}
 
   c2p-failure:
@@ -97,7 +95,6 @@ jobs:
         uses: ./.github/actions/code-coverage
         with:
           compiler: 'gcc'
-        secrets:
           codecov_token: ${{ secrets.CODECOV_TOKEN }}
 
   tabulated-eos:
@@ -125,7 +122,6 @@ jobs:
         uses: ./.github/actions/code-coverage
         with:
           compiler: 'gcc'
-        secrets:
           codecov_token: ${{ secrets.CODECOV_TOKEN }}
 
   piecewise-polytrope-eos:
@@ -151,7 +147,6 @@ jobs:
         uses: ./.github/actions/code-coverage
         with:
           compiler: 'gcc'
-        secrets:
           codecov_token: ${{ secrets.CODECOV_TOKEN }}
 
   grhayl-core:
@@ -180,7 +175,6 @@ jobs:
         uses: ./.github/actions/code-coverage
         with:
           compiler: 'gcc'
-        secrets:
           codecov_token: ${{ secrets.CODECOV_TOKEN }}
 
   flux:
@@ -213,7 +207,6 @@ jobs:
         uses: ./.github/actions/code-coverage
         with:
           compiler: 'gcc'
-        secrets:
           codecov_token: ${{ secrets.CODECOV_TOKEN }}
 
   reconstruction:
@@ -245,7 +238,6 @@ jobs:
         uses: ./.github/actions/code-coverage
         with:
           compiler: 'gcc'
-        secrets:
           codecov_token: ${{ secrets.CODECOV_TOKEN }}
 
   neutrinos:
@@ -279,7 +271,6 @@ jobs:
         uses: ./.github/actions/code-coverage
         with:
           compiler: 'gcc'
-        secrets:
           codecov_token: ${{ secrets.CODECOV_TOKEN }}
 
   con-to-prim-tabulated:
@@ -326,7 +317,6 @@ jobs:
         uses: ./.github/actions/code-coverage
         with:
           compiler: 'gcc'
-        secrets:
           codecov_token: ${{ secrets.CODECOV_TOKEN }}
 
   code-failure:
@@ -361,7 +351,6 @@ jobs:
         with:
           compiler: 'gcc'
           codecov_token: ${{ secrets.CODECOV_TOKEN }}
-        secrets:
 
   induction-interpolators:
     strategy:
@@ -399,7 +388,6 @@ jobs:
         uses: ./.github/actions/code-coverage
         with:
           compiler: 'gcc'
-        secrets:
           codecov_token: ${{ secrets.CODECOV_TOKEN }}
 
   induction-flux:
@@ -434,5 +422,4 @@ jobs:
         uses: ./.github/actions/code-coverage
         with:
           compiler: 'gcc'
-        secrets:
           codecov_token: ${{ secrets.CODECOV_TOKEN }}
