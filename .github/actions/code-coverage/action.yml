@@ -5,8 +5,8 @@ inputs:
     description: compiler for test
     required: true
     default: 'gcc'
+secrets:
   codecov_token:
-    description: Github token needed for upload
     required: true
 
 runs:
@@ -45,5 +45,8 @@ runs:
     #  shell: bash
 
     - uses: codecov/codecov-action@v4
-      env:
-        CODECOV_TOKEN: inputs.codecov_token
+      with:
+          fail_ci_if_error: true
+          token: ${{ secrets.codecov_token }}
+#     env:
+ #      CODECOV_TOKEN: inputs.codecov_token
