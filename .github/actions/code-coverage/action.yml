@@ -47,6 +47,6 @@ runs:
     - uses: codecov/codecov-action@v4
       with:
           fail_ci_if_error: true
-          token: ${{ secrets.codecov_token }}
+          token: inputs.codecov_token
 #      env:
 #        CODECOV_TOKEN: inputs.codecov_token
