@@ -45,8 +45,8 @@ runs:
     #  shell: bash
 
 #    - uses: codecov/codecov-action@v3
-#      with:
-#          fail_ci_if_error: true
-#          token: inputs.codecov_token
+      with:
+          fail_ci_if_error: true
+          token: ${{ inputs.codecov_token }}
 #      env:
-#        CODECOV_TOKEN: inputs.codecov_token
+#        CODECOV_TOKEN: ${{ inputs.codecov_token }}
